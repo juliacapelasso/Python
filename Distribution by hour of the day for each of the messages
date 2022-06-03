@@ -9,9 +9,9 @@ counts = dict()
 lst = list()
 count = 0
 
-#Splitting each line of the file to get words, 
-#then word at 6th place, then in that first letter
-#of that 6th word splitted by ':', appending that into the list
+# separando cada linha para obter as palavras, 
+# na sexta palavra, assim, na primeira letra da 6ª palavra, 
+# a palavra sera separada e se juntará a lista
 
 for line in handle:
     if line.startswith("From "):
@@ -20,7 +20,7 @@ for line in handle:
         words = words.split(':')
         lst.append(words[0])
                 
-#Now counting the letters occurred at different no. of times        
+# contando o número de vezes     
 
 for i in lst:
     counts[i] = counts.get(i,0) + 1
